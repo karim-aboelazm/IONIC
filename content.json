@@ -1,0 +1,226 @@
+{
+    "content":
+    [
+        {
+            "tag" : "greetings",
+            "patterns" : ["hello", "welcome", "hi","hay","wake up","Python","What's up"],
+            "responses" : ["hello sir" , "how are you sir", "Always For You Sir", "Hello","Here's Your Assistant"]
+        },
+        {
+            "tag" : "bye",
+            "patterns" : ["bye", "goodbye", "see you later","sleep", "exit"],
+            "responses" : ["Bye" , "I am Going", "Bye Sir","Goodbye", "It will be nice to meet you again"]
+        },
+        {
+            "tag" : "health",
+            "patterns" : ["how are you", "how do you do", "are you fine ?","are you good"],
+            "responses" : ["fine." , "perfect", "cool","Are you Fine ? I'm Fine","I am Ok ,What abou you ? "]
+        },
+        {
+            "tag" : "identity",
+            "patterns" : ["your name", "what is your name", "who are you","whar are you","Are you Assistant"],
+            "responses" : ["Python Assistant" , "I am Python Assistant created by Us ","My Name is Python Assistant","yes , I am Python Assistant"]
+        },
+        {
+            "tag" : "time",
+            "patterns" : ["what time is now ?", "what is the time ?", "tell me time","time"],
+            "responses" : ["The time is "]
+
+        },
+        {
+            "tag" : "date",
+            "patterns" : ["what date is ?", "what is the date ?", "tell me date","date"],
+            "responses" : ["The date is "]
+        },
+        {
+            "tag" : "day",
+            "patterns" : ["what day is ?", "what is the day ?", "tell me day","day","today is"],
+            "responses" : ["The day is "]
+        },
+        {
+            "tag" : "wikipedia",
+            "patterns" : ["who is  ?", "about", "what is ","wikipedia","which is","What do you know about ?"],
+            "responses" : ["wikipedia"]
+        },
+        {
+            "tag" : "google",
+            "patterns" : ["google search", "search for", "search about","google","which is"],
+            "responses" : ["google"]
+        },
+        {
+            "tag" : "YouTube",
+            "patterns" : ["YouTube search", "in YouTube", "YouTube"],
+            "responses" : ["YouTube"]
+        },
+        {
+            "tag" : "website",
+            "patterns" : ["open", "website","site"],
+            "responses" : ["website"]
+        },
+        {
+            "tag" : "playvideo",
+            "patterns" : ["play", "music","youtube music","youtube video","start video"],
+            "responses" : ["playvideo"]
+        },
+        {
+            "tag" : "weather",
+            "patterns" : ["weather in","what is weather in","weather for","tell me the weather for","what is the weather for"],
+            "responses" : ["weather"]
+        },
+        {
+            "tag" : "temperature",
+            "patterns" : ["temperature","what is the temperature","temperature in","temperature for"],
+            "responses" : ["temperature"]
+        },
+        {
+            "tag" : "calculate",
+            "patterns" : ["calculate","plus","multiply","div on","power","minus","divide","in","into","+","-","/","x"],
+            "responses" : ["calculate"]
+        },
+        {
+            "tag" : "whatsapp message",
+            "patterns" : ["send message to","send","whatsapp message","make a message","message to","message for"],
+            "responses" : ["whatsapp message"]
+        },
+        {
+            "tag" : "whatsapp call",
+            "patterns" : ["make a call","call","whatsapp call"],
+            "responses" : ["whatsapp call"]
+        },
+        {
+            "tag" : "whatsapp video",
+            "patterns" : ["make a video","video","whatsapp video","video call"],
+            "responses" : ["whatsapp video"]
+        },
+        {
+            "tag" : "whatsapp chat",
+            "patterns" : ["open chat","chating with","whatsapp chat","chat with","chat to","to chat with","show chat"],
+            "responses" : ["whatsapp chat"]
+        },
+        {
+            "tag" : "open word",
+            "patterns" : ["word","Microsoft Word","word file","open word"],
+            "responses" : ["open word"]
+        },
+        {
+            "tag" : "open access",
+            "patterns" : ["access","Microsoft access","access file","open access"],
+            "responses" : ["open access"]
+        },
+        {
+            "tag" : "open powerpoint",
+            "patterns" : ["PowerPoint","Microsoft PowerPoint","PowerPoint file","presentation","ppt file","open access","ppt"],
+            "responses" : ["open powerpoint"]
+        },
+        {
+            "tag" : "open excel",
+            "patterns" : ["excel","Microsoft excel","excel file","excel sheet","open excel"],
+            "responses" : ["open excel"]
+        },
+        {
+            "tag" : "open chrome",
+            "patterns" : ["chrome","google chrome","chrome page","open chrome"],
+            "responses" : ["open chrome"]
+        },
+        {
+            "tag" : "open cmd",
+            "patterns" : ["cmd","command screen","command line","command prompt","black screen", "Dos Screen", "Dos"],
+            "responses" : ["open cmd"]
+        },
+        {
+            "tag" : "open vscode",
+            "patterns" : ["vs","vs code","vscode","code","script file", "my code"],
+            "responses" : ["open vscode"]
+        },
+        {
+            "tag" : "open zoom",
+            "patterns" : ["zoom","zoom meeting","meeting","open zoom"],
+            "responses" : ["open zoom"]
+        },
+        {
+            "tag" : "open notepad",
+            "patterns" : ["notepad","open notepad"],
+            "responses" : ["open notepad"]
+        },
+        {
+            "tag" : "close word",
+            "patterns" : ["word close","close word","shutdown word","shut word"],
+            "responses" : ["close word"]
+        },
+        {
+            "tag" : "close access",
+            "patterns" : ["access close","close access","shutdown access","shut access"],
+            "responses" : ["close access"]
+        },
+        {
+            "tag" : "close powerpoint",
+            "patterns" : ["PowerPoint close","close PowerPoint","shutdown PowerPoint","shut ppt" , "close presentation"],
+            "responses" : ["close powerpoint"]
+        },
+        {
+            "tag" : "close excel",
+            "patterns" : ["close excel","excel close","shutdown excel","shut excel"],
+            "responses" : ["close excel"]
+        },
+        {
+            "tag" : "close chrome",
+            "patterns" : ["close chrome","chrome close","shutdown chrome","shut chrome"],
+            "responses" : ["close chrome"]
+        },
+        {
+            "tag" : "close cmd",
+            "patterns" : ["close cmd","cmd close","close command","command close","shutdown command prompt","shut black screen", "shut Dos Screen", "shut Dos"],
+            "responses" : ["close cmd"]
+        },
+        {
+            "tag" : "close vscode",
+            "patterns" : ["close vs","vs code close","close vscode","close code","shut script file", "shut my code"],
+            "responses" : ["close vscode"]
+        },
+        {
+            "tag" : "close zoom",
+            "patterns" : ["close zoom","zoom meeting close","close meeting","shutdown zoom"],
+            "responses" : ["close zoom"]
+        },
+        {
+            "tag" : "close notepad",
+            "patterns" : ["close notepad","shutdown notepad"],
+            "responses" : ["close notepad"]
+        },
+        {
+            "tag" : "internet speed",
+            "patterns" : ["The speed of the Internet","Internet speed"],
+            "responses" : ["internet speed"]
+        },
+        {
+            "tag" : "how to",
+            "patterns" : ["How can I","how can I do", "how to"],  
+            "responses" : ["how to"]
+        },
+        {
+            "tag" : "remember that",
+            "patterns" : ["Can You remember that","remember that","remind me that", "remember"],  
+            "responses" : ["remember that"]
+        },
+        {
+            "tag" : "what do you remember",
+            "patterns" : ["what do you remember","Do You remember that", "Do you still remember","Do you still remind that"],  
+            "responses" : ["what do you remember"]
+        },
+        {
+            "tag" : "break",
+            "patterns" : ["sleep","Take a break", "break","you need a break Omar"],   
+            "responses" : ["break"]
+        },
+        {
+            "tag" : "nasa news",
+            "patterns" : ["nasa","Nasa news", "news from Nasa","space news"],   
+            "responses" : ["nasa news"]
+        },
+        {
+            "tag" : "egy news",
+            "patterns" : ["Egyptian news","Egy news","EG news","get news","our news","news of Egypt"],   
+            "responses" : ["egy news"]
+        }
+    ]
+}

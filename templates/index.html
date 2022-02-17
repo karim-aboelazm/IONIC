@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Our Voice Assistant</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content=""/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/team_card.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/flexslider.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/templatemo_style.css') }}" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body class="templatemo-black-bg">
+
+	<nav id="responsive-menu">
+        <ul class="menu-holder">
+            <li class="active"><a href="#home"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#about_project"><i class="fa fa-briefcase"></i>Project</a></li>
+            <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
+            <li><a href="#testimonials"><i class="fa fa-list"></i>Testimonials</a></li>            
+            <li><a href="#our_team"><i class="fa fa-list"></i>About Team</a></li>            
+            <li><a href="#contact"><i class="fa fa-briefcase"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+	<div class="templatemo-nav-container">
+		<div class="container templatemo-white-bg">
+			<div class="row">
+				<nav class="hidden-xs text-uppercase templatemo-nav">
+					<ul class="menu-holder">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#about_project">Project</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#our_team">About Team</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="text-right visible-xs">
+		            <a href="#" id="mobile_menu"><span class="fa fa-bars"></span></a>
+		        </div>
+			</div>			
+		</div>
+	</div>
+
+	<section id="home">
+		<div class="container">
+			<div class="row">
+				<div class="templatemo-home-left col-lg-4 col-md-5 col-sm-5 templatemo-white-bg">
+					<div class="templatemo-logo">
+						<p class="templatemo-site-name templatemo-blue-text  Ionic">Ionic</p>
+						<span class="templatemo-slogan">Make Easy</span>
+					</div>
+					<img src="{{ url_for('static', filename='images/black-curve.png') }}" alt="Black Curve" class="templatemo-logo-bg">
+				</div>
+				<div class="templatemo-home-right col-lg-8 col-md-7 col-sm-7 templatemo-white-bg templatemo-gradient-bg">
+					<h2 class="templatemo-dark-gray-text">Our Graduation Project</h2>
+					<h3 class="templatemo-dark-gray-text">Voice Assistant</h3>
+					<div class="row">
+						<div class="col-md-4">
+							<form class="input control-form" id="voice-form" method="post">
+								<button class="text-uppercase templatemo-learn-more templatemo-blue-text">Speak Now</button>
+							</form>
+						</div>
+						<div class="col-md-8">
+							<img style="width: 100%;" src="{{ url_for('static', filename='images/voice.gif') }}" alt="">
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about_project">
+		<div class="container templatemo-white-bg">
+			<div class="row">
+				<div class="templatemo-about-left col-lg-5 col-md-5 col-sm-5">
+					<h2 class="templatemo-blue-text">Voice Assistant</h2>
+					<br>
+					<h4>Description</h4>
+					<p class="templatemo-light-gray-text" style="text-align:justify;">An AI virtual assistant is an application program that understands natural language voice commands and completes tasks for a user, while providing a variety of remote services to a business. AI virtual assistant chatbots combine virtual assistant services with chatbot functionality. Also known as intelligent virtual assistants (IVAs) and virtual agents, they upgrade the traditional AI virtual assistant experience to be more advanced and personalized than ever before. In fact, you may have already interacted with this virtual assistant technology if you’ve ever used Amazon’s Alexa or Apple’s Siri.
+						This article will provide an overview of virtual assistant chatbots and describe different types of virtual assistants, benefits of virtual assistant chatbots for your customers and your business, and how our AI virtual assistants can drive agent productivity and enhance the customer experience.</p>
+					
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 templatemo-about-right">
+					<img style="width: 100%;" src="{{ url_for('static', filename='images/voice_assist.png') }}" alt="Smart Phone">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="services">
+		<div class="container templatemo-white-bg text-center">
+			<div class="row templatemo-services">
+				<h2 class="templatemo-blue-text" style="margin-bottom: 10px;">Our Services</h2>
+				<h3 style="text-transform: lowercase; color: gray">We Aim to help who has disable in apart of his hand to write</h3>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<img style="width: 40%;" src="{{ url_for('static', filename='images/services/news.png') }}" alt="Services 1">
+					<h4><em>Getting News</em></h4>
+					<p class="templatemo-light-gray-text" style="text-align: justify;"><em>We can ask our assistant to getting news from nasa and from google. It can get it in few seconds after we asking. Getting all news we need like football and temperature.</em></p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<img src="{{ url_for('static', filename='images/services/apps.png') }}" alt="Services 2">
+					<h4><em>Control Apps</em></h4>
+					<p class="templatemo-light-gray-text" style="text-align: justify;"><em>We can ask our assistant to open our windows apps and close apps. It can make a control over apps to open it with our voice and close with our voice also.</em></p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<img style="width: 40%;" src="{{ url_for('static', filename='images/services/wiki.png') }}" alt="Services 3">
+					<h4><em>Wikipedia Search</em></h4>
+					<p class="templatemo-light-gray-text" style="text-align: justify;"><em>Voice search is often interactive, involving several rounds of interaction that allows a system to ask for clarification. Voice search is a type of dialog system. Voice search is not a replacement for typed search. </em></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonials" >
+		<div class="container templatemo-white-bg" style="padding-bottom:180px">
+			<div class="row">
+				<div class="templatemo-testimonials-left col-lg-5 col-md-5 col-sm-5">
+					<h2 class="templatemo-testimonials-header text-center">
+						<span class="first">Voices</span>
+						<span class="second">from Clients</span>
+					</h2>
+					<img src="{{ url_for('static', filename='images/blue-button.jpg') }}" alt="Blue Button" class="templatemo-blue-btn">
+				</div>
+				<div class="templatemo-testimonials-right templatemo-gradient-bg col-lg-7 col-md-7 col-sm-7">
+					<div class="slider">
+						<div class="flexslider">
+					  	<ul class="slides templatemo-light-gray-text text-center templatemo-em">
+					    	<li>
+					      		<p class="templatemo-testimonial-name">Thomas</p>
+					      		<p><i class="fa fa-quote-left"></i>Nulla consectetur, mi sed fermentum sodales, nisl massa lacinia erat, eu commodo ipsum mi sit amet lacus. Donec sollicitudin tincidunt elit. Mauris posuere ex nec felis pretium porttitor.<i class="fa fa-quote-right"></i></p>
+					    	</li>
+					    	<li>
+					      		<p class="templatemo-testimonial-name">Nathan</p>
+					      		<p><i class="fa fa-quote-left"></i>Morbi pulvinar eleifend ante eget suscipit. Ut posuere nibh id lacus blandit, ac hendrerit turpis rhoncus. Sed felis justo, finibus id metus nec, ultricies pretium est. Nullam vel ex cursus, viverra augue quis, pharetra massa.<i class="fa fa-quote-right"></i></p>
+					    	</li>
+						    <li>
+						      	<p class="templatemo-testimonial-name">Berry</p>
+						      	<p><i class="fa fa-quote-left"></i>Pellentesque ultrices nulla sit amet augue aliquet egestas. Nulla erat nulla, maximus at auctor nec, suscipit ut est.<i class="fa fa-quote-right"></i></p>
+						    </li>
+						    <li>
+						      	<p class="templatemo-testimonial-name">Julia</p>
+						      	<p><i class="fa fa-quote-left"></i>Nullam aliquam tellus lorem, rutrum blandit ante tincidunt a. Duis ut ligula aliquam, maximus massa sit amet, finibus odio. Praesent eget lacus in dui consectetur aliquam quis at neque.<i class="fa fa-quote-right"></i></p>
+						    </li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="our_team" style="font-family: 'Cabin Condensed', sans-serif;">
+		<div class="container templatemo-white-bg">
+			<h2 class="templatemo-site-name templatemo-blue-text team-title">Ou<span>r Te</span>am</h2>
+			<div class="row" style="display:block-flex;margin-top:100px">
+
+				<div class="col-4 box">
+					<div class="imgBx">
+					<img src="{{ url_for('static', filename='images/team/Ahmed_mosleh.jpeg') }}" alt="">
+					</div>
+					<div class="card-footer">
+					<h4>Ahmed Mosleh</h4>
+					<p style="font-size: 15px;">Python Developer</p>
+					</div>
+				</div>
+				
+				<div class="col-4 box">
+					<div class="imgBx">
+						<img src="{{ url_for('static', filename='images/team/Ahmed_menem.jpeg') }}" alt="">
+					</div>
+					<div class="card-footer">
+						<h4>Ahmed Menem</h4>
+						<p style="font-size: 15px;">Web Developer</p>
+					</div>
+				</div>
+
+				<div class="col-4 box">
+					<div class="imgBx">
+					<img class="img-kelany" src="{{ url_for('static', filename='images/team/Ahmed_kelany.jpeg') }}" alt="">
+					</div>
+					<div class="card-footer">
+					<h4>Ahmed Kelany</h4>
+					<p style="font-size: 15px;">Odoo Developer</p>
+					</div>
+				</div>
+				
+				<div class="col-4 box">
+					<div class="imgBx">
+					<img src="{{ url_for('static', filename='images/team/Ahmed_mamdoh.jpeg') }}" alt="">
+					</div>
+					<div class="card-footer">
+					<h4>Ahmed Mamdoh</h4>
+					<p style="font-size: 15px;">ML Developer</p>
+					</div>
+				</div>
+
+				<div class="col-4 box">
+					<div class="imgBx">
+						<img src="https://i.ibb.co/VNnNB0P/team-2.jpg" alt="">
+					</div>
+					<div class="card-footer">
+						<h3>Lorem Ipusem</h3>
+						<h3>Senior Front-end Developer</h3>
+					</div>
+				</div>
+					
+				<div class="col-4 box">
+					<div class="imgBx">
+						<img src="https://i.ibb.co/VNnNB0P/team-2.jpg" alt="">
+					</div>
+					<div class="card-footer">
+						<h3>Lorem Ipusem</h3>
+						<h3>Senior Front-end Developer</h3>
+					</div>
+				</div>
+					
+				<div class="col-4 box">
+					<div class="imgBx">
+						<img src="https://i.ibb.co/VNnNB0P/team-2.jpg" alt="">
+					</div>
+					<div class="card-footer">
+						<h3>Lorem Ipusem</h3>
+						<h3>Senior Front-end Developer</h3>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+	
+	<section id="contact">
+		<div class="container templatemo-white-bg">
+			<div class="row templatemo-contact">
+				<h2 class="templatemo-red-text text-center">Contact</h2>
+				<h3 class="text-center">Sagittis Semnec Delit</h3>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<form action="#" method="post">
+						<div class="tm-contact-form">
+			                <div class="form-group">
+			                    <input name="name" type="text" class="form-control" id="contact_name" placeholder="Name..." />
+		                  </div>
+			                <div class="form-group">
+			                    <input name="email" type="email" class="form-control" id="contact_email" placeholder="Email..." />
+		                  </div>
+			                <div class="form-group">
+			                    <input name="subject" type="text" class="form-control" id="contact_subject" placeholder="Subject..." />
+		                  </div>
+			                <div class="form-group">
+			                    <textarea name="message" rows="8" class="form-control" id="contact_message" placeholder="Message..."></textarea>
+			                </div>
+		                </div>
+		                <button type="submit" class="btn text-uppercase templatemo-send-btn">Send</button>
+		            </form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="container templatemo-white-bg">
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="templatemo-copyright-container text-right text-uppercase small">
+					<span class="templatemo-copyright-text">Copyright &copy; 2022 <a href="#">OI Team</a></span>
+					<span class="templatemo-copyright-design"></span>
+				</p>
+			</div>
+		</div>		
+	</footer>
+
+	<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/templatemo_script.js') }}"></script>
+
+</body>
+
+</html>
