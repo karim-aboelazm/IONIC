@@ -1,7 +1,5 @@
 from flask_cors import cross_origin
 from flask import Flask,render_template,request
-from voice_output import Say
-from voice_input import Listen
 from assistant import assistant
 
 app = Flask(__name__)
@@ -17,6 +15,7 @@ def homepage():
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
+
 
 
 

@@ -163,17 +163,17 @@ def Nasa_News():
     title = Data['title']
 
     image_url = Data['url']
-    image_request = requests.get(image_url)
+    webbrowser.open(image_url)
 
-    filename = str(date)+'.jpg'
-    with open(filename,'wb') as f:
-        f.write(image_request.content)
+    # filename = str(date)+'.jpg'
+    # with open(filename,'wb') as f:
+    #     f.write(image_request.content)
 
-    p1 = "E:\\AI_Voice_Project\\Project\\Coding\\"+str(filename)
-    p2 = "E:\\AI_Voice_Project\\Project\\Coding\\NASA_DATA\\"+str(filename)
-    rename(p1,p2)
-    img = Image.open(p2)
-    img.show()
+    # p1 = "E:\\AI_Voice_Project\\Project\\Coding\\"+str(filename)
+    # p2 = "E:\\AI_Voice_Project\\Project\\Coding\\NASA_DATA\\"+str(filename)
+    # rename(p1,p2)
+    # img = Image.open(p2)
+    # img.show()
     Say(f"title : {title}")
     Say(f"According to Nasa : {Info}")
 
