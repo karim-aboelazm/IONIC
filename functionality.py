@@ -10,6 +10,7 @@ from PIL import Image # pillow
 from newscatcherapi import NewsCatcherApiClient
 import speedtest
 import wolframalpha
+import bs4
 from pyautogui import click, position
 from keyboard import write , press
 from voice_input import Listen
@@ -179,7 +180,7 @@ def Nasa_News():
 
 def egy_news():
     Say("Getting News from The internet..")
-    api_key = 'v2KkHYXP67qO2Y29E0420Mx-idWH1wrHqt-cCCopW04'
+    api_key = 'lTV5KamSD6ll7ISfC81RnG3TX9jvItK0Svy4lciFVEU'
     newscatcherapi = NewsCatcherApiClient(x_api_key=api_key)
 
     all_articles = newscatcherapi.get_search(q='*',
@@ -197,6 +198,7 @@ def egy_news():
             i+=1
         else:
             break
+
 
 def get_error(query): 
     query = str(query)
@@ -312,7 +314,7 @@ def get_input_error(tag,query):
     if "wikipedia" in tag:
         name = str(query).replace("who is","").replace("about","").replace("what is","").replace("wikipedia","")
         Say(wikipedia.summary(name))
-    
+        
     elif "google" in tag:
         name = str(query).replace("google","")
         name = name.replace("search for","")
@@ -427,4 +429,30 @@ def get_input_error(tag,query):
         assert len(how_to) == max_result
         Say(how_to[0].summary)
     
+    elif "recognize" in tag:
+        query = str(query).replace("he is ","").replace("she is ","")
+        query = str(query)
+        Say(f"Welcome to You {query} \nNice to meet you !")
+
+    elif "corona" in tag:
+        command = str(query).replace(" ","")
+        Say("Tell Me Which Country You Want To Know It's Data ...")
+        country = Listen()
+        country = str(country).lower()
+        url = f"https://www.worldometers.info/coronavirus/country/{country.lower()}/"
+        results = requests.get(url)
+        soups = bs4.BeautifulSoup(results.text,'lxml')
+        corona = soups.find_all('div',class_="maincounter-number")
+        Data = []
+        for case in corona:
+            span = case.find('span')
+            Data.append(span.string)
+        cases ,Death, recovored = Data
+        Say(f"The corona virus in {country} Statistics are..")
+        Say(f"The Number of all Cases     is      {cases} person")
+        Say(f"The Number of all Death     is      {Death} person")
+        Say(f"The Number of all Recovered is  {recovored} person")
+        webbrowser.open(f"https://www.google.com/search?q={country.lower()}+coronavirus")
+    
+
     

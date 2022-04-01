@@ -1,13 +1,16 @@
 import speech_recognition as sr
 
 def Listen():
-    mic = sr.Recognizer()   # Recognizer object
-    with sr.Microphone() as source: # Microphone object
-        mic.pause_threshold = 1 # wait for a second
-        audio = mic.listen(source) # listen to the voice input 
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print('Listening.....')
+        r.pause_threshold = 1
+        audio = r.listen(source,0,4)
     try:
-        query = mic.recognize_google(audio,language='en') # Query of Listened   
+        print('Recognizing...')
+        query = r.recognize_google(audio,language='en')
+        print(f'You said : {query}')
     except:
-       return   # None
+        return 
     query = str(query)
     return query.lower()

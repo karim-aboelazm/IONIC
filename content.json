@@ -221,6 +221,16 @@
             "tag" : "egy news",
             "patterns" : ["Egyptian news","Egy news","EG news","get news","our news","news of Egypt"],   
             "responses" : ["egy news"]
+        },
+        {
+            "tag" : "recognize",
+            "patterns" : ["he is","she is","i am"],   
+            "responses" : ["recognize"]
+        },
+        {
+            "tag" : "corona",
+            "patterns" : ["covid-19","Covid","Virus","Corona","corona","covid"],   
+            "responses" : ["corona"]
         }
     ]
 }

@@ -147,6 +147,24 @@ def assistant():
                 
                 elif "how to" in reply:
                     get_input_error(reply,result)
+                
+                elif "recognize" in reply:
+                     get_input_error(reply,result)
+
+                elif "corona" in reply:
+                    get_input_error(reply,result)
 
                 else:    
                     Say(reply)
+
+def Listen_name():
+    name = Listen()
+    if name == "ionic":
+        Say("Yes Sir Tell Me How Can I Help You ....")
+        while True:
+            assistant()
+    elif name == None:
+        Listen_name()
+
+
+
