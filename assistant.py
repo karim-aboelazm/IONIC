@@ -2,14 +2,12 @@ import random
 import json
 import torch
 from brain import NeuralNetwork
-from neural_network import *
 from voice_input import Listen
 from voice_output import Say
+from neural_network import *
 from functionality import *
 # ------------------------------------------------------------------
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
 # -------------------------------------------------------------------
 
 with open('content.json','r') as jd:
@@ -48,123 +46,119 @@ def assistant():
             if tag == content['tag']:
                 reply = random.choice(content['responses'])
                 if 'time' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'date' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'day' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "break" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open word' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open powerpoint' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open access' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open excel' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open vscode' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open cmd' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open chrome' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open zoom' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'open notepad' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close word" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close powerpoint" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close vscode" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close chrome" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close notepad" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close access" in reply:
-                   get_error(reply)
+                   singleCommand(reply)
                 elif "close excel" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "close zoom" in reply:
-                   get_error(reply)
+                   singleCommand(reply)
                 elif "close cmd" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif 'internet speed' in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "nasa news" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "egy news" in reply:
-                    get_error(reply)
+                    singleCommand(reply)
                 elif "wikipedia" in reply:
                     Say('Searching Sir...')
-                    get_input_error(reply,stm)
+                    multiCommand(reply,stm)
                 elif "google" in reply:
-                    Say('Searching Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif "YouTube" in reply:
                     Say('opening Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif "website" in reply:
                     Say('opening Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif "playvideo" in reply:
                     Say('playing Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif "weather" in reply:
                     Say('Forcasting Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif "temperature" in reply:
                     Say('Ok Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif "calculate" in reply:
-                    Say('Calculating Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
 
                 elif "whatsapp message" in reply:
                     Say('Ok Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
 
                 elif "whatsapp call" in reply:
                     Say('Ok Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
 
                 elif "whatsapp video" in reply:
                     Say('Ok Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
 
                 elif "whatsapp chat" in reply:
                     Say('Ok Sir...')
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
 
                 elif 'remember that' in reply:
                     Say("Ok Sir..")
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 elif 'what do you remember' in reply:
                     Say("Ok Sir..")
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 
                 elif "how to" in reply:
-                    get_input_error(reply,result)
+                    multiCommand(reply,result)
                 
                 elif "recognize" in reply:
-                     get_input_error(reply,result)
+                     multiCommand(reply,result)
 
                 elif "corona" in reply:
-                    get_input_error(reply,result)
-
+                    multiCommand(reply,result)
                 else:    
                     Say(reply)
 
 def Listen_name():
     name = Listen()
-    if name == "ionic":
+    if str(name).lower() == "ionic":
         Say("Yes Sir Tell Me How Can I Help You ....")
         while True:
             assistant()
-    elif name == None:
+    elif str(name) == None:
         Listen_name()
-
 
 

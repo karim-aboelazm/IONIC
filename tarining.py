@@ -5,10 +5,9 @@ import torch.nn as nn
 from torch.utils.data import DataLoader,Dataset
 from brain import NeuralNetwork
 from neural_network import *
-
+import matplotlib.pyplot as plt
 with open('content.json','r') as f:
     contents = json.load(f)
-
 
 all_words = []
 tags      = []
@@ -71,6 +70,9 @@ model = NeuralNetwork(input_size,hidden_size,output_size).to(device=device)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(),lr=learning_rate)
 
+ep = [i*100 for i in range(1,11)]
+y = np.array(ep)
+x = []
 for epoch in range(num_epoches):
     for (words,labels) in train_loader:
         words = words.to(device)
@@ -81,9 +83,16 @@ for epoch in range(num_epoches):
         loss.backward()
         optimizer.step()
     if (epoch+1)%100 == 0:
-        print(f'Epoch [{epoch+1} / {num_epoches}], loss [{loss.item():.4f}]')
+        x.append(loss.item())
+        print(f'Epoch [{epoch+1} / {num_epoches}], loss [{loss.item():.10f}]')
     
-print(f'Final Loss : [{loss.item():.4f}]')
+print(f'Final Loss : [{loss.item():.10f}]')
+x = np.array(x)
+plt.title("Training Results")
+plt.xlabel("Epoches")
+plt.ylabel("Erorr")
+plt.plot(y,x,'r')
+plt.show()
 # ------------------------------------------
 data = {
     "model_state":model.state_dict(),

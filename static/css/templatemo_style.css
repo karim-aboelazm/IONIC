@@ -1,25 +1,3 @@
-/*	
-
-Ion Template
-http://www.templatemo.com/tm-431-ion
-
-COLOR CODES
-  Blue #0db5c0
-  Red #fe475b
-  Light Gray #9b9b9b
-
-TABLE OF CONTENT
-  1. Universal Styles
-  2. Menu Styles
-  3. Home & About Styles
-  4. Products Styles
-  5. Testimonials Styles
-  6. Contact & Footer Styles
-  7. Media Queries
---------------------------------------*/
-
-/* 1. Universal Styles
---------------------------------------*/
 * { font-family: 'Open Sans', sans-serif; }
 h1, h2, h3, h4 { text-transform: uppercase; }
 h1 {
@@ -302,7 +280,7 @@ textarea.form-control { padding: 15px; }
   height: 350px; 
 }
 footer {
-  background: url('../images/red-corner.png') no-repeat right;
+  background: url('../images/bluecorner.png') no-repeat right;
   height: 115px;
 }
 footer .col-lg-12 { padding: 0; }

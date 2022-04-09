@@ -44,7 +44,7 @@
         },
         {
             "tag" : "google",
-            "patterns" : ["google search", "search for", "search about","google","which is"],
+            "patterns" : ["google search", "search for", "search about","google","which is","googling"],
             "responses" : ["google"]
         },
         {
