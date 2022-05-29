@@ -17,3 +17,4 @@
 ### [2] download app and install it
 ### [3] open it and press on the mic and call it by ["ionic" or "wake up"]
 ### -----------------------------------------------------------------------------------
+<img src="https://github.com/karim-aboelazm/MIS-04/blob/my-branch/wel.gif?raw=true" width="500"/>
