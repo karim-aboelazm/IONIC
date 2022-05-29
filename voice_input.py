@@ -3,11 +3,11 @@ import speech_recognition as sr
 def Listen():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print('Listening.....')
+        print("Listening...")
         r.pause_threshold = 1
         audio = r.listen(source,0,4)
     try:
-        print('Recognizing...')
+        print("Recognizing...")
         query = r.recognize_google(audio,language='en')
         print(f'You said : {query}')
     except:

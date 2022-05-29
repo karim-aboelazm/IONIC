@@ -47,12 +47,14 @@ def singleCommand(query):
         close_zoom()
     elif "close cmd" in query:
         close_cmd()
-    elif "internet speed" in query:
-        check_internet_speed()
+    # elif "internet speed" in query:
+    #     check_internet_speed()
     elif "nasa news" in query:
         Nasa_News()
     elif "egy news" in query:
         egy_news()  
+    elif "introduction" in query:
+        introduction()
 
 def multiCommand(tag,query):
 

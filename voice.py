@@ -7,7 +7,7 @@ app = Flask(__name__)
 @cross_origin()
 def homepage():
     if request.method == 'POST':
-        Listen_name()
+        assistant()
         return render_template('index.html')
     else:
         return render_template('index.html')

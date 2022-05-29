@@ -6,6 +6,7 @@ from voice_input import Listen
 from voice_output import Say
 from neural_network import *
 from functionality import *
+
 # ------------------------------------------------------------------
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # -------------------------------------------------------------------
@@ -28,9 +29,12 @@ model.eval()
 def assistant():
     stm = Listen()
     result = str(stm)
-    if stm == "exit" or stm == None:
+    if stm == "exit":
         Say('Goodbye Sir')
         exit()
+    elif stm==None:
+        while True:
+            assistant()
     stm = tokenize(stm)
     w = bag_of_words(stm,all_words)  
     w = w.reshape(1,w.shape[0])   
@@ -89,8 +93,10 @@ def assistant():
                    singleCommand(reply)
                 elif "close cmd" in reply:
                     singleCommand(reply)
-                elif 'internet speed' in reply:
+                elif "introduction" in reply:
                     singleCommand(reply)
+                # elif 'internet speed' in reply:
+                #     singleCommand(reply)
                 elif "nasa news" in reply:
                     singleCommand(reply)
                 elif "egy news" in reply:
@@ -154,12 +160,9 @@ def assistant():
 
 def Listen_name():
     name = Listen()
-    if str(name).lower() == "ionic":
+    if str(name).lower() == "ionic" or str(name).lower()== "wake up":
         Say("Yes Sir Tell Me How Can I Help You ....")
         while True:
             assistant()
     elif str(name) == None:
         Listen_name()
-
-while True:
-    assistant()

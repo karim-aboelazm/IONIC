@@ -226,10 +226,17 @@
             "tag" : "recognize",
             "patterns" : ["he is","she is","i am"],   
             "responses" : ["recognize"]
-        },
+        }
+        ,
+        {
+            "tag" : "introduction",
+            "patterns" : ["explain the project","talk about project","Introduce yourself","project overview"],   
+            "responses" : ["introduction"]
+        }
+        ,
         {
             "tag" : "corona",
-            "patterns" : ["covid-19","Covid","Virus","Corona","corona","covid"],   
+            "patterns" : ["covid-19","covid","virus","corona"],   
             "responses" : ["corona"]
         }
     ]

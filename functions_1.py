@@ -4,7 +4,7 @@ import webbrowser
 import bs4
 from os import startfile,system
 import requests
-import speedtest
+# import speedtest
 from pyautogui import click
 from keyboard import write , press
 from voice_input import Listen
@@ -28,13 +28,13 @@ def get_day():
 def open_word():
     Say("Online Or Local Sir ...")
     stm = Listen()
-    if str(stm) == "local":
+    if "local" in str(stm)  or "desktop" in str(stm) or 'here' in str(stm):
         click(x=13, y=754)
         time.sleep(3)
         write('word')
         time.sleep(3)
         press('enter')
-    elif str(stm) == "online":
+    elif "online" in str(stm)  or "website" in str(stm) or 'web' in str(stm):
         webbrowser.open("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637851054783314025.NDQzZjQ3YmYtNzEwOS00ODRlLWE0M2EtOGIxNDI4MmM3MGE4ODRkNjFkOTQtYjNmZi00NTY2LTgzODktN2Y4YjRjNTM3N2Ri&ui_locales=en-US&mkt=en-US&state=hQjvNARizXjF5CFEQqRkWO7ZWRwmZnnr_FrC5CB-xii4Jgn8a1zBVSScfHn6sIZolgH1IQO9JFyiRbTsZcT_N59eAGCLYIx6KQ60KF2kedv81S2YApMdi9l3ISNPjt54gZjHWZeOWoYk26zaifK6PAl64pRcZflM-ErG9MycKjGq-mAPMHgbZ-1i1mSoW6TjLdl-qleSyUfvKUn55AzfhEI0Xs4WPm8CTZ_q8hzwEvK9km_5k0SJkRr-sMMB9Mi_VWmbmaqNlpGV-CTyrcEPcAUy7rL65oeLIFfbD2wnmWneTz466woigXPT6ixHAucj&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0")
     else:
         return None
@@ -57,13 +57,13 @@ def close_chrome():
 def open_excel():
     Say("Online Or Local Sir ...")
     stm = Listen()
-    if str(stm) == "local":
+    if "local" in str(stm)  or "desktop" in str(stm) or 'here' in str(stm):
         click(x=13, y=754)
         time.sleep(3)
         write('excel')
         time.sleep(3)
         press('enter')
-    elif str(stm) == "online":
+    elif "online" in str(stm)  or "website" in str(stm) or 'web' in str(stm):
         webbrowser.open("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637851054783314025.NDQzZjQ3YmYtNzEwOS00ODRlLWE0M2EtOGIxNDI4MmM3MGE4ODRkNjFkOTQtYjNmZi00NTY2LTgzODktN2Y4YjRjNTM3N2Ri&ui_locales=en-US&mkt=en-US&state=hQjvNARizXjF5CFEQqRkWO7ZWRwmZnnr_FrC5CB-xii4Jgn8a1zBVSScfHn6sIZolgH1IQO9JFyiRbTsZcT_N59eAGCLYIx6KQ60KF2kedv81S2YApMdi9l3ISNPjt54gZjHWZeOWoYk26zaifK6PAl64pRcZflM-ErG9MycKjGq-mAPMHgbZ-1i1mSoW6TjLdl-qleSyUfvKUn55AzfhEI0Xs4WPm8CTZ_q8hzwEvK9km_5k0SJkRr-sMMB9Mi_VWmbmaqNlpGV-CTyrcEPcAUy7rL65oeLIFfbD2wnmWneTz466woigXPT6ixHAucj&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0")
     else:
         return None
@@ -75,13 +75,13 @@ def close_excel():
 def open_access():
     Say("Online Or Local Sir ...")
     stm = Listen()
-    if str(stm) == "local":
+    if "local" in str(stm)  or "desktop" in str(stm) or 'here' in str(stm):
         click(x=13, y=754)
         time.sleep(3)
         write('access')
         time.sleep(3)
         press('enter')
-    elif str(stm) == "online":
+    elif "online" in str(stm)  or "website" in str(stm) or 'web' in str(stm):
         webbrowser.open("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637851054783314025.NDQzZjQ3YmYtNzEwOS00ODRlLWE0M2EtOGIxNDI4MmM3MGE4ODRkNjFkOTQtYjNmZi00NTY2LTgzODktN2Y4YjRjNTM3N2Ri&ui_locales=en-US&mkt=en-US&state=hQjvNARizXjF5CFEQqRkWO7ZWRwmZnnr_FrC5CB-xii4Jgn8a1zBVSScfHn6sIZolgH1IQO9JFyiRbTsZcT_N59eAGCLYIx6KQ60KF2kedv81S2YApMdi9l3ISNPjt54gZjHWZeOWoYk26zaifK6PAl64pRcZflM-ErG9MycKjGq-mAPMHgbZ-1i1mSoW6TjLdl-qleSyUfvKUn55AzfhEI0Xs4WPm8CTZ_q8hzwEvK9km_5k0SJkRr-sMMB9Mi_VWmbmaqNlpGV-CTyrcEPcAUy7rL65oeLIFfbD2wnmWneTz466woigXPT6ixHAucj&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0")
     else:
         return None
@@ -156,14 +156,14 @@ def close_cmd():
     time.sleep(1)
     system('taskkill /f /im cmd.exe')
 
-def check_internet_speed():
-    Say('Checking Sir ...')
-    speed = speedtest.Speedtest()
-    download_speed = speed.download()
-    correct_Dspeed = int(download_speed/800000)
-    upload_speed = speed.upload()
-    correct_Uspeed = int(upload_speed/800000)
-    Say(f'Download speed is {correct_Dspeed} m/s , upload speed is {correct_Uspeed} m/s')
+# def check_internet_speed():
+#     Say('Checking Sir ...')
+#     speed = speedtest.Speedtest()
+#     download_speed = speed.download()
+#     correct_Dspeed = int(download_speed/800000)
+#     upload_speed = speed.upload()
+#     correct_Uspeed = int(upload_speed/800000)
+#     Say(f'Download speed is {correct_Dspeed} m/s , upload speed is {correct_Uspeed} m/s')
 
 def break_assistant():   
     Say("Ok Sir , You Can Call Me At Anytime ..")
@@ -218,3 +218,40 @@ def egy_news():
         else:
             break
 
+intro = "Hi , I am Python Assistant created by M I S 4 Team and my name is IONIC. and Engineer Karim Abouelazm And Doctor Ibraheem Gomaa were Our supervisors. Can I give you an overview about project ?"
+overview="""
+In recent years, Artificial Intelligence (AI) has shown significant progress and its potential is growing. 
+An application area of AI is Natural Language Processing (NLP). Voice assistants incorporate AI by using 
+cloud computing and can communicate with the users in natural language. Voice assistants are easy to use 
+and thus there are millions of devices that incorporates them in households nowadays. Most common devices 
+with voice assistants are smart speakers and they have just started to be used in schools and universities. 
+The purpose of this paper is to study how voice assistants and smart speakers are used in everyday life and 
+whether there is potential in order for them to be used for educational purposes.
+Can I give you an overview about my Jobs ?
+"""
+jobs = [
+"Answer to questions asked by users.",
+"Play music from Youtube.",
+"Check Internet speed.",
+"Searching about any thing in wikipedia",
+"Make calls or send messages.",
+"Open and close most of applications.",
+"Provide information about the weather.",
+"Give steps for how to make any thing.",
+"Detect covid-19."
+]
+
+def introduction():
+    Say(intro)
+    stm = Listen()
+    if str(stm)=="yes" or str(stm)=="sure" or str(stm)=="ok" or str(stm)=="why not":
+        Say(overview)
+        stm2 = Listen()
+        if str(stm2)=="yes" or str(stm2)=="sure" or str(stm2)=="ok" or str(stm2)=="why not":
+            for i in range(len(jobs)):
+                Say(f"[{i+1}] I can {jobs[i]}")
+        else:
+           Say("As You want sir , it is nice to speak with you") 
+                
+    else:
+        Say("As You want sir , it is nice to speak with you") 
