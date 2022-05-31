@@ -6,6 +6,7 @@ from voice_input import Listen
 from voice_output import Say
 from neural_network import *
 from functionality import *
+
 # ------------------------------------------------------------------
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # -------------------------------------------------------------------
@@ -96,7 +97,8 @@ def assistant():
                 elif "egy news" in reply:
                     singleCommand(reply)
                 elif "wikipedia" in reply:
-                    Say('Searching Sir...')
+                    singleCommand(reply)
+                    
                     multiCommand(reply,stm)
                 elif "google" in reply:
                     multiCommand(reply,result)
@@ -160,5 +162,5 @@ def Listen_name():
             assistant()
     elif str(name) == None:
         Listen_name()
-
-
+#while True:
+    #assistant()

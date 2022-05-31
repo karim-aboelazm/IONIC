@@ -232,5 +232,6 @@
             "patterns" : ["covid-19","Covid","Virus","Corona","corona","covid"],   
             "responses" : ["corona"]
         }
+        
     ]
 }

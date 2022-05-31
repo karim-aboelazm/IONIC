@@ -10,6 +10,7 @@ from keyboard import write , press
 from voice_input import Listen
 from voice_output import Say
 
+
 # this function for getting time now
 def get_time():
     time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -201,9 +202,8 @@ def egy_news():
         des = h.find('p')
         titles.append(title.string)
         descriptions.append(des.string)
-
     Say(f"Category [1] : {titles[0]}")
-    Say(f"Description : {descriptions[0][1:-2]}")
+    Say(f"Description : {descriptions[0][2:-2]}")
     print("="*50)
     stm = ''
     i = 0
@@ -212,9 +212,11 @@ def egy_news():
         if stm == 'next':
             print()
             Say(f"Category [{i+2}] : {titles[i+1]}")
-            Say(f"Description : {descriptions[i+1][1:-2]}")
+            Say(f"Description : {descriptions[i+1][2:-2]}")
             print("="*50)
             i+=1
         else:
             break
+
+            
 

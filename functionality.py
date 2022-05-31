@@ -52,7 +52,7 @@ def singleCommand(query):
     elif "nasa news" in query:
         Nasa_News()
     elif "egy news" in query:
-        egy_news()  
+        egy_news()   
 
 def multiCommand(tag,query):
 

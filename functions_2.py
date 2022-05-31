@@ -21,7 +21,7 @@ def wolframalpha_setting(query):
         Say("Something went wrong Sir..")
 
 def whatsapp_msg(name,message):
-    click(x=688, y=756)
+    click(x=571, y=745)
     time.sleep(20)
     click(x=80, y=102)
     time.sleep(2)
